@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu — Ember & Spice</title>
+  <link rel="stylesheet" href="africankit.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <nav class="navbar scrolled" id="navbar">
+    <div class="logo">Ember <span>&</span> Spice</div>
+    <ul class="nav-links">
+      <li><a href="africankit.html">Home</a></li>
+      <li><a href="menu.html" class="active">Menu</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html#reserve" class="reserve-btn">Reserve a Table</a>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="africankit.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html#reserve" class="mobile-reserve-btn">Reserve a Table</a>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <div class="menu-page-wrap">
+    <div class="menu-hero-bar">
+      <p class="section-tag">Fresh · Bold · Authentic</p>
+      <h1>Our Menu</h1>
+      <p>Order what you love — made fresh daily</p>
+      <input type="text" id="searchBar" placeholder="Search for a dish..." class="search-bar">
+    </div>
+
+    <div class="cat-tabs" id="catTabs"></div>
+
+    <div class="menu-body" id="menuBody"></div>
+  </div>
+
+  <a href="cart.html" class="cart-bubble" id="cartBubble">
+    🛒 <span class="cart-count" id="cartCount">0</span>
+  </a>
+
+  <a href="https://wa.me/2347075256299?text=Hi%2C%20I%27d%20like%20to%20place%20an%20order" class="whatsapp-btn" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <script src="menu.js"></script>
+  <script>
+    document.getElementById('hamburger').addEventListener('click', function() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    });
+    initMenuPage();
+  </script>
+</body>
+</html>
